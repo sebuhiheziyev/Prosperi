@@ -1,0 +1,111 @@
+@import "default";
+@import "color";
+@import "variables";
+
+nav{
+  .my-container{
+    .nav-area{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 35px;
+      position: relative;
+      a.refresh {
+        font-size: 24px;
+        font-weight: 600;
+        color: $main-color;
+      }
+      .hamburger-icon{
+          position: absolute;
+          right: 0;
+          top: 39px;
+        i{
+          font-size: 30px;
+        }
+      }
+      .menu{
+        position: absolute;
+        width: 100%;
+        top: 146px;
+        text-align: center;
+        font-size: 18px;
+  
+        ul{
+          margin-bottom: 65px;
+          li{
+            margin-top: 20px;
+            &:first-child {
+              margin-top: 0px;        
+            }
+            a{
+              font-weight: 500;
+              color: $main-color;
+            }
+          }
+        }
+        .support-mail{
+          a{
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//open fixed menu
+.navbar-open{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#terms{
+  padding-top: $section-padding;
+  .my-container{
+    ol{
+      list-style-type: none;
+      padding: 0px;
+      li{
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 75px;        
+        }
+      }
+    }
+    
+  }
+}
+
+#privacy{
+  padding-top: $section-padding;
+  .sub-text{
+    margin-bottom: 75px;
+    p{
+      font-weight: 400;
+    }
+  }
+  .info-text{
+    margin-bottom: 75px;
+    ul{
+      margin: 0px 0px 25px 18px;
+      list-style-type: disc;
+    }
+  }
+}
+
+#faq{
+  padding-top: $section-padding;
+  .faqs{
+    .question{
+      list-style-type: disc;
+      margin: 0px 0px 0px 18px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .answer{
+      margin-bottom: 20px;
+    }
+  }
+}
+
