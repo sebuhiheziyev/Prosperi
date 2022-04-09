@@ -16,7 +16,7 @@ nav{
       }
       .hamburger-icon{
           position: absolute;
-          right: 0;
+          right: 11px;
           top: 39px;
         i{
           font-size: 30px;
@@ -66,10 +66,11 @@ nav{
     ol{
       list-style-type: none;
       padding: 0px;
+      margin-bottom: 75px;        
       li{
         margin-bottom: 20px;
         &:last-child {
-          margin-bottom: 75px;        
+          margin-bottom: 0px;
         }
       }
     }
@@ -88,7 +89,7 @@ nav{
   .info-text{
     margin-bottom: 75px;
     ul{
-      margin: 0px 0px 25px 18px;
+      list-style-position: inside;
       list-style-type: disc;
     }
   }
@@ -99,12 +100,58 @@ nav{
   .faqs{
     .question{
       list-style-type: disc;
-      margin: 0px 0px 0px 18px;
+      list-style-position: inside;
       font-size: 18px;
       font-weight: 600;
     }
     .answer{
       margin-bottom: 20px;
+    }
+  }
+}
+
+#moneyback{
+  padding-top: $section-padding;
+  .my-container{
+    .moneyback-text{
+      margin-bottom: 75px;        
+      p{
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0px;
+        }
+      }
+  }
+  }
+}
+
+#subscription{
+  padding-top: $section-padding;
+  .my-container{
+    .subscription-text{
+      margin-bottom: 75px;        
+     ol{
+      list-style: none;
+      counter-reset: item;
+      padding: 0;
+      list-style-position: inside;
+      li{
+        counter-increment: item;
+        &::before{
+          margin-right: 10px;
+          content: counters(item,".") " ";
+          display: inline-block;
+        }
+
+        span{
+          margin: 0px 0px 20px 0px;
+        }
+        .inside-ol{
+          font-weight: 300;
+          margin: 20px 0px;
+        }
+      }
+     }
     }
   }
 }

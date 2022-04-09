@@ -81,7 +81,7 @@ nav .my-container .nav-area a.refresh {
 
 nav .my-container .nav-area .hamburger-icon {
   position: absolute;
-  right: 0;
+  right: 11px;
   top: 39px;
 }
 
@@ -132,6 +132,7 @@ nav .my-container .nav-area .menu .support-mail a {
 #terms .my-container ol {
   list-style-type: none;
   padding: 0px;
+  margin-bottom: 75px;
 }
 
 #terms .my-container ol li {
@@ -139,7 +140,7 @@ nav .my-container .nav-area .menu .support-mail a {
 }
 
 #terms .my-container ol li:last-child {
-  margin-bottom: 75px;
+  margin-bottom: 0px;
 }
 
 #privacy {
@@ -159,7 +160,7 @@ nav .my-container .nav-area .menu .support-mail a {
 }
 
 #privacy .info-text ul {
-  margin: 0px 0px 25px 18px;
+  list-style-position: inside;
   list-style-type: disc;
 }
 
@@ -169,12 +170,62 @@ nav .my-container .nav-area .menu .support-mail a {
 
 #faq .faqs .question {
   list-style-type: disc;
-  margin: 0px 0px 0px 18px;
+  list-style-position: inside;
   font-size: 18px;
   font-weight: 600;
 }
 
 #faq .faqs .answer {
   margin-bottom: 20px;
+}
+
+#moneyback {
+  padding-top: 75px;
+}
+
+#moneyback .my-container .moneyback-text {
+  margin-bottom: 75px;
+}
+
+#moneyback .my-container .moneyback-text p {
+  margin-bottom: 20px;
+}
+
+#moneyback .my-container .moneyback-text p:last-child {
+  margin-bottom: 0px;
+}
+
+#subscription {
+  padding-top: 75px;
+}
+
+#subscription .my-container .subscription-text {
+  margin-bottom: 75px;
+}
+
+#subscription .my-container .subscription-text ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  list-style-position: inside;
+}
+
+#subscription .my-container .subscription-text ol li {
+  counter-increment: item;
+}
+
+#subscription .my-container .subscription-text ol li::before {
+  margin-right: 10px;
+  content: counters(item, ".") " ";
+  display: inline-block;
+}
+
+#subscription .my-container .subscription-text ol li span {
+  margin: 0px 0px 20px 0px;
+}
+
+#subscription .my-container .subscription-text ol li .inside-ol {
+  font-weight: 300;
+  margin: 20px 0px;
 }
 /*# sourceMappingURL=style.css.map */
