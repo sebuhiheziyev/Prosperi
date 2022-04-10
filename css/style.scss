@@ -16,7 +16,7 @@ nav{
       }
       .hamburger-icon{
           position: absolute;
-          right: 11px;
+          right: 13px;
           top: 39px;
         i{
           font-size: 30px;
@@ -156,3 +156,119 @@ nav{
   }
 }
 
+#quiz{
+  padding-top: 55px;
+  .my-container{
+    .go-quiz{
+      padding: 0px 105px;
+      display: flex;
+      justify-content: space-between;
+      .go-quiz-info{
+        width: 340px;
+        padding-top: 105px;
+        h2{
+          color: #5F7AF1;
+          font-weight: 600;
+          font-size: 30px;
+          margin-bottom: 0px;
+          span{
+            color: $main-color;
+            font-weight: 700;
+            display: block;
+          } 
+        }
+        .go-quiz-btn{
+          background-color: #5F7AF1;
+          border-radius: 15px;
+          padding: 16px 0px;
+          margin: 30px 0px 25px 0px;
+          text-transform: uppercase;
+          border: none;
+          width: 313px;
+          color: white;
+        }
+        .page-links{
+          color: #9e9e9e;
+          font-size: 14px;
+          a{
+            color: #9e9e9e;
+            text-decoration: underline;
+          }
+        }
+      }
+      .go-quiz-img{
+        width: 400px;
+        height: 437px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:768px){
+  #quiz{
+    padding-top: 48px;  
+    .my-container{
+      .go-quiz{
+        padding: 0px;
+        .go-quiz-info{
+          padding-top: 28px;
+          h2{
+            font-size: 24px;
+          }
+          .go-quiz-btn{
+            width: 252px;
+          }
+        }
+        .go-quiz-img{
+          width: 258px;
+          height: 281px;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:480px){
+  nav{
+    .my-container{
+      .nav-area{
+        .hamburger-icon{
+          right: 4px;
+        }
+      }
+    }
+  }
+
+  #quiz{
+    padding-top: 48px;  
+    .my-container{
+      .go-quiz{
+        display: block;
+        position: relative;
+        .go-quiz-info{
+          h2{
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          .group-R{
+            position: absolute;
+            bottom: -200px;
+            .go-quiz-btn{
+              width: 100%;
+            }
+          }
+        }
+        .go-quiz-img{
+          margin: 0 auto;
+          width: 229px;
+          height: 249px;
+        }
+      }
+    }
+  }
+}
