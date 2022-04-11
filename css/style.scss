@@ -3,6 +3,7 @@
 @import "variables";
 
 nav{
+  z-index: 999;
   .my-container{
     .nav-area{
       display: flex;
@@ -26,6 +27,7 @@ nav{
         position: absolute;
         width: 100%;
         top: 146px;
+        left: 0;
         text-align: center;
         font-size: 18px;
   
@@ -157,17 +159,17 @@ nav{
 }
 
 #quiz{
-  padding-top: 55px;
+
   .my-container{
     .go-quiz{
-      padding: 0px 105px;
+      padding: 55px 105px 0px 105px;
       display: flex;
       justify-content: space-between;
       .go-quiz-info{
         width: 340px;
         padding-top: 105px;
         h2{
-          color: #5F7AF1;
+          color: $blue-color;
           font-weight: 600;
           font-size: 30px;
           margin-bottom: 0px;
@@ -178,7 +180,7 @@ nav{
           } 
         }
         .go-quiz-btn{
-          background-color: #5F7AF1;
+          background-color: $blue-color;
           border-radius: 15px;
           padding: 16px 0px;
           margin: 30px 0px 25px 0px;
@@ -205,15 +207,84 @@ nav{
         }
       }
     }
+
+    .quiz-area{
+      padding-top: 25px;
+      .back{
+        color: #9E9E9E;
+        i{
+          color: #9E9E9E;
+        }
+      }
+      .quiz-degree{
+        margin: 0px 0px 35px 0px;
+        padding-top: 75px;
+        .degree-same{
+          background: rgba(95, 122, 241, 0.1);
+          border-radius: 33px;
+          position: relative;
+          height: 21px;
+          .degree-layout{
+            background: $blue-color;
+            border-radius: 33px;
+            height: 21px;
+            position: absolute;
+           }
+           .degree-name{
+            position: absolute;
+            bottom: -28px;
+            color: $blue-color;
+         }
+        }
+        .quiz-degree-first{
+           width: 100%;
+           .degree-layout{
+            width: 42%;
+           }
+        }
+        .quiz-degree-second{
+          width: 100%;
+           .degree-layout{
+            width: 67%;
+           }
+        }
+      }
+      .quiz-content{
+        position: relative;
+        
+        .quiz-counter{
+          color: $blue-color;
+          position: absolute;
+          top: -85px;
+          right: 0px;
+        }
+
+        .quiz-question{
+          font-size: 22px;
+          font-weight: 500;
+          margin-bottom: 15px;
+        }
+        .quiz-answers{
+          .quiz-answer{
+            background: rgba(95, 122, 241, 0.1);
+            border-radius: 33px;
+            padding: 18px 20px 18px 20px;
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+            border: none;
+          }
+        }
+      }
+    }
   }
 }
 
 @media only screen and (max-width:768px){
   #quiz{
-    padding-top: 48px;  
     .my-container{
       .go-quiz{
-        padding: 0px;
+        padding: 48px 0px 0px 0px;
         .go-quiz-info{
           padding-top: 28px;
           h2{
@@ -226,6 +297,16 @@ nav{
         .go-quiz-img{
           width: 258px;
           height: 281px;
+        }
+      }
+      .quiz-area{
+        .quiz-degree{
+          padding-top: 41px;
+        }
+        .quiz-content{
+          .quiz-question{
+            font-size: 20px;
+          }
         }
       }
     }
@@ -245,15 +326,15 @@ nav{
   }
 
   #quiz{
-    padding-top: 48px;  
     .my-container{
       .go-quiz{
+        padding-top: 48px;
         display: block;
         position: relative;
         .go-quiz-info{
           h2{
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 40px ;
           }
           .group-R{
             position: absolute;
@@ -269,6 +350,23 @@ nav{
           height: 249px;
         }
       }
+      .quiz-area{
+        .quiz-degree{
+          padding-top: 48px;
+          font-size: 14px;
+
+        }
+          .quiz-content{
+            padding-top: 20px;
+            .quiz-question{
+              font-size: 18px;
+            }
+            .quiz-counter{
+              font-size: 14px;
+            }
+          }
+      }
+
     }
   }
 }
