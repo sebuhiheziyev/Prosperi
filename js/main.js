@@ -24,16 +24,7 @@ $(window).on('load', function () {
         $("#nav").removeClass("navbar-open");
     });
 
-    // open quiz
-    // $(".go-quiz-btn").click(function () {
-    //     $(".go-quiz").addClass("d-none");
-
-    //     //open quiz
-    //     $(".quiz-area").removeClass("d-none");
-    //     $(".quiz-area").addClass("d-block");
-
-    // });
-
+    
     //change quiz 
     var activSliderCount = 1;
     var mySliders = $(".mySlider");
@@ -57,8 +48,13 @@ $(window).on('load', function () {
     var defoltFirstPercent = 0;
     var defoltSecondPercent = 0;
 
-    var firstPercent = (100 / leftOverLay);
-    var secondPercent = (100 / rightOverLay);
+    
+    var firstPercent = (100 / (leftOverLay - 1));
+   
+   
+    var secondPercent = (100 / (rightOverLay - 1 ));
+
+
 
     $(".quiz-answer").click(function () {
         
@@ -72,9 +68,19 @@ $(window).on('load', function () {
 
         if (quizType == 0) {
             defoltFirstPercent += firstPercent;
+            console.log(defoltFirstPercent);
+
+            if(defoltFirstPercent > 100){
+                defoltFirstPercent = 100;
+                $(".layoutSecond").css('width', secondPercent + '%');
+
+            }
             $(".layoutFirst").css('width', defoltFirstPercent + '%');
         }
         else {
+            if(defoltSecondPercent > 100){
+                defoltSecondPercent = 100;
+            }
             defoltSecondPercent += secondPercent;
             $(".layoutSecond").css('width', defoltSecondPercent + '%');
 
@@ -84,7 +90,7 @@ $(window).on('load', function () {
         changeSlider(activSliderCount);
 
         if((activSliderCount -1) == mySliders.length){
-            location.href = 'email.html';
+            location.href = 'creating-plan.html';
         }
     });
 
@@ -107,7 +113,7 @@ $(window).on('load', function () {
     }
 
 
-
+    //click back
     $(".back").click(function () {
         if (activSliderCount > 1) {
             activSliderCount -= 1;
@@ -117,16 +123,15 @@ $(window).on('load', function () {
                     if (quizType == 0) {
                         defoltFirstPercent -= firstPercent;
                         $(".layoutFirst").css('width', defoltFirstPercent + '%');
+                        console.log(activSliderCount);
+                        console.log(index);
                     }
                     else {
                         defoltSecondPercent -= secondPercent;
                         $(".layoutSecond").css('width', defoltSecondPercent + '%');
-            
                     }
                 }
-  
             }
-
             changeSlider(activSliderCount);
         }
         else {
@@ -138,6 +143,60 @@ $(window).on('load', function () {
             $(".layoutSecond").css('width', 0 + '%');
         }
     });
+
+    
+    //plan page in loading 
+    var durationCounter = 10000;    //plan page in loading min
+    var  counterValue = $(".plan").length;
+    var durationPlan = durationCounter / counterValue;
+
+    //plan page in li add active class
+    var durationPlan = durationCounter / counterValue;
+    console.log(durationPlan);
+
+    $('.counter-value').each(function() {
+        var $this = $(this),
+        countTo = $this.attr('data-count');
+        $({
+          countNum: $this.text()
+          
+        }).animate({
+            countNum: countTo
+          },
+  
+          {
+            duration: durationCounter,
+            easing: 'swing',
+            step: function() {
+              $this.text(Math.floor(this.countNum) + "%");
+              
+            },
+            complete: function() {
+              $this.text(this.countNum + "%");
+              location.href = 'email.html';
+            }
+  
+        });
+       
+    });
+
+    //plan add active class
+    // var d = 0;
+    // setInterval(function() {
+    //     if(d < counterValue ){
+    //         $(".plan")[d].classList.add('active');
+    //          d +=1;
+    //     }else{
+    //         console.log("s");
+    //     }
+       
+    //  }, durationPlan)
+
+    //creating page btn email click
+    $(".emailBtn").click(function(){
+        location.href = 'payment.html';
+    });
+
 });
 
 
