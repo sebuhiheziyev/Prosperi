@@ -24,11 +24,11 @@ $(window).on('load', function () {
         $("#nav").removeClass("navbar-open");
     });
 
-    
+
     //change quiz 
     var activSliderCount = 1;
     var mySliders = $(".mySlider");
-  
+
 
     var leftOverLay = 0;
     var rightOverLay = 0;
@@ -48,16 +48,16 @@ $(window).on('load', function () {
     var defoltFirstPercent = 0;
     var defoltSecondPercent = 0;
 
-    
+
     var firstPercent = (100 / (leftOverLay - 1));
-   
-   
-    var secondPercent = (100 / (rightOverLay - 1 ));
+
+
+    var secondPercent = (100 / (rightOverLay - 1));
 
 
 
     $(".quiz-answer").click(function () {
-        
+
         //active quiz none
         var quiz = $(this).parents(".mySlider");
         quiz.addClass("d-none");
@@ -68,9 +68,8 @@ $(window).on('load', function () {
 
         if (quizType == 0) {
             defoltFirstPercent += firstPercent;
-            console.log(defoltFirstPercent);
 
-            if(defoltFirstPercent > 100){
+            if (defoltFirstPercent > 100) {
                 defoltFirstPercent = 100;
                 $(".layoutSecond").css('width', secondPercent + '%');
 
@@ -78,7 +77,7 @@ $(window).on('load', function () {
             $(".layoutFirst").css('width', defoltFirstPercent + '%');
         }
         else {
-            if(defoltSecondPercent > 100){
+            if (defoltSecondPercent > 100) {
                 defoltSecondPercent = 100;
             }
             defoltSecondPercent += secondPercent;
@@ -89,7 +88,7 @@ $(window).on('load', function () {
         activSliderCount += 1;
         changeSlider(activSliderCount);
 
-        if((activSliderCount -1) == mySliders.length){
+        if ((activSliderCount - 1) == mySliders.length) {
             location.href = 'creating-plan.html';
         }
     });
@@ -118,13 +117,11 @@ $(window).on('load', function () {
         if (activSliderCount > 1) {
             activSliderCount -= 1;
             for (let index = 0; index < mySliders.length; index++) {
-                if(index == activSliderCount){
+                if (index == activSliderCount) {
                     var quizType = (mySliders[index].getAttribute("dg"));
                     if (quizType == 0) {
                         defoltFirstPercent -= firstPercent;
                         $(".layoutFirst").css('width', defoltFirstPercent + '%');
-                        console.log(activSliderCount);
-                        console.log(index);
                     }
                     else {
                         defoltSecondPercent -= secondPercent;
@@ -144,58 +141,116 @@ $(window).on('load', function () {
         }
     });
 
-    
+
+    //change quiz end
+
+
+
     //plan page in loading 
     var durationCounter = 10000;    //plan page in loading min
-    var  counterValue = $(".plan").length;
+    var counterValue = $(".plan").length;
     var durationPlan = durationCounter / counterValue;
+
+
 
     //plan page in li add active class
     var durationPlan = durationCounter / counterValue;
-    console.log(durationPlan);
 
-    $('.counter-value').each(function() {
+    $('.counter-value').each(function () {
         var $this = $(this),
-        countTo = $this.attr('data-count');
+            countTo = $this.attr('data-count');
         $({
-          countNum: $this.text()
-          
+            countNum: $this.text()
+
         }).animate({
             countNum: countTo
-          },
-  
-          {
-            duration: durationCounter,
-            easing: 'swing',
-            step: function() {
-              $this.text(Math.floor(this.countNum) + "%");
-              
-            },
-            complete: function() {
-              $this.text(this.countNum + "%");
-              location.href = 'email.html';
-            }
-  
-        });
-       
+        },
+
+            {
+                duration: durationCounter,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.floor(this.countNum) + "%");
+
+                },
+                complete: function () {
+                    $this.text(this.countNum + "%");
+                    location.href = 'email.html';
+                }
+
+            });
+
     });
 
-    //plan add active class
-    // var d = 0;
-    // setInterval(function() {
-    //     if(d < counterValue ){
-    //         $(".plan")[d].classList.add('active');
-    //          d +=1;
-    //     }else{
-    //         console.log("s");
-    //     }
-       
-    //  }, durationPlan)
+    var d = 0;
+    var interval = setInterval(function () {
+        if (d < counterValue) {
+            $(".plan")[d].classList.add('active');
+            d += 1;
+        }else{
+            clearInterval(interval);
+        }
+    }, durationPlan);
+    //end  plan page in li add active 
+    
+ 
 
     //creating page btn email click
-    $(".emailBtn").click(function(){
+    $(".emailBtn").click(function () {
         location.href = 'payment.html';
     });
+
+
+    // payment page slider
+
+    var pCount = 1;
+    var pSliders = $(".fb-slider");
+
+    $(".back-p").click(function () {
+        if (pCount == 1) {
+            pCount = pSliders.length;
+        } else {
+            pCount -= 1;
+
+        }
+        paymentSlider(pCount);
+    });
+
+    $(".next-p").click(function () {
+        if (pCount == pSliders.length) {
+            pCount = 1;
+        }
+        else {
+            pCount += 1;
+        }
+        paymentSlider(pCount);
+
+    });
+
+    function paymentSlider(c) {
+        var i = 0;
+        for (var pSlider of pSliders) {
+            i++;
+            if (i == c) {
+                pSlider.classList.remove(
+                    'd-none',
+                );
+            } else {
+                pSlider.classList.add(
+                    'd-none',
+                );
+            }
+        }
+    }
+
+    // payment page slider end
+
+    // time 
+    //  var min = 0;
+    // var timeInterval = setInterval(function () {
+    //     min +=1
+    //  console.log(min)
+    // }, 1000);
 
 });
 
