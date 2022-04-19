@@ -42,9 +42,8 @@ p.italic {
   background: #5F7AF1;
   border-radius: 15px;
   border: none;
-  padding: 16px 0px;
+  padding: 16px 70px;
   color: #fff;
-  width: 100%;
   text-transform: uppercase;
 }
 
@@ -77,6 +76,9 @@ p.italic {
 @media only screen and (max-width: 480px) {
   .my-container {
     padding: 0px 30px;
+  }
+  .btn-blue {
+    width: 100%;
   }
 }
 
@@ -190,6 +192,7 @@ nav .my-container .nav-area .menu .support-mail a {
 
 #faq {
   padding-top: 75px;
+  padding-bottom: 80px;
 }
 
 #faq .faqs .question {
@@ -419,10 +422,11 @@ nav .my-container .nav-area .menu .support-mail a {
 #plan .plan-area {
   width: 315px;
   margin: 0 auto;
+  padding-top: 94px;
 }
 
 #plan .plan-area .spinner {
-  margin: 94px auto 37px auto;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 25px;
   color: #5F7AF1;
@@ -479,6 +483,10 @@ nav .my-container .nav-area .menu .support-mail a {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+#plan .plan-area .create-plan {
+  padding-top: 37px;
 }
 
 #plan .plan-area .create-plan p {
@@ -801,7 +809,8 @@ nav .my-container .nav-area .menu .support-mail a {
 }
 
 #payment .my-container .you-get {
-  padding: 0px 304px;
+  max-width: 832px;
+  margin: 0 auto;
 }
 
 #payment .my-container .you-get h2 {
@@ -817,6 +826,7 @@ nav .my-container .nav-area .menu .support-mail a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 45px;
+  height: 270px;
 }
 
 #payment .my-container .you-get .post .post-left {
@@ -826,6 +836,7 @@ nav .my-container .nav-area .menu .support-mail a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 70%;
 }
 
 #payment .my-container .you-get .post .post-left .num {
@@ -857,19 +868,22 @@ nav .my-container .nav-area .menu .support-mail a {
   width: 380px;
 }
 
-#payment .my-container .you-get .post .post-one img {
-  width: 181px;
-  height: 266px;
+#payment .my-container .you-get .post .post-right {
+  width: 30%;
+  height: 270px;
 }
 
-#payment .my-container .you-get .post .post-two img {
-  width: 286px;
-  height: 262px;
+#payment .my-container .you-get .post .post-right img {
+  max-width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#payment .my-container .you-get .post .post-three img {
-  width: 274px;
-  height: 203px;
+#payment .my-container .you-get .even .post-left {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 #payment .my-container .feed-back {
@@ -1106,6 +1120,32 @@ nav .my-container .nav-area .menu .support-mail a {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1180px) {
+  #go .my-container .go-quiz {
+    padding: 48px 0px 0px 0px;
+  }
+  #go .my-container .go-quiz .go-quiz-img {
+    width: 350px;
+    height: 375px;
+  }
+  #payment .money-back {
+    padding: 100px 200px;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  #go .my-container .go-quiz .go-quiz-img {
+    width: 258px;
+    height: 281px;
+  }
+  #go .my-container .go-quiz .go-quiz-info {
+    padding-top: 0px;
+  }
+  #payment .money-back {
+    padding: 100px 140px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   #quiz .my-container .quiz-area .quiz-main {
     width: 372px;
@@ -1146,17 +1186,23 @@ nav .my-container .nav-area .menu .support-mail a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
   #payment .my-container .you-get .post .post-left {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin: 0 auto;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #payment .my-container .you-get .post .post-right {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    width: 100%;
     text-align: center;
     margin-bottom: 30px;
   }
@@ -1269,6 +1315,10 @@ nav .my-container .nav-area .menu .support-mail a {
   #quiz .my-container .quiz-area .quiz-main .quiz-content .quiz-text {
     font-size: 17px;
   }
+  #plan .plan-area {
+    width: 100%;
+    margin: 0 auto;
+  }
   #go .my-container .go-quiz {
     padding-top: 48px;
     display: block;
@@ -1321,8 +1371,17 @@ nav .my-container .nav-area .menu .support-mail a {
   #payment .my-container .payment-area .your-profile .info {
     padding: 26px 20px;
   }
+  #payment .my-container .you-get .post {
+    height: auto;
+  }
+  #payment .my-container .you-get .post .post-right {
+    width: 100%;
+  }
   #payment .my-container .you-get .post .post-right img {
     max-width: 100%;
+  }
+  #payment .my-container .you-get .post .post-left {
+    width: 100%;
   }
   #payment .my-container .you-get .post .post-left .post-info {
     margin-left: 20px;

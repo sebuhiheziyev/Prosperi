@@ -119,6 +119,7 @@ nav {
 
 #faq {
   padding-top: $section-padding;
+  padding-bottom: 80px;
 
   .faqs {
     .question {
@@ -354,6 +355,8 @@ nav {
           height: 100%;
         }
       }
+
+      
     }
   }
 }
@@ -365,9 +368,9 @@ nav {
   .plan-area {
     width: 315px;
     margin: 0 auto;
-
+    padding-top: 94px;
     .spinner {
-      margin: 94px auto 37px auto;
+      margin: 0 auto;
       font-weight: 700;
       font-size: 25px;
       color: $blue-color;
@@ -377,7 +380,6 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-
       &::before {
         border: 11px solid $blue-color;
         border-radius: 50%;
@@ -414,6 +416,7 @@ nav {
 
 
     .create-plan {
+      padding-top: 37px;
       p {
         font-weight: 600;
         font-size: 20px;
@@ -755,7 +758,8 @@ nav {
     }
 
     .you-get {
-      padding: 0px 304px;
+      max-width: 832px;
+      margin: 0 auto;
 
       h2 {
         text-align: center;
@@ -766,10 +770,11 @@ nav {
         display: flex;
         justify-content: space-between;
         margin-bottom: 45px;
-
+        height: 270px;
         .post-left {
           display: flex;
           align-items: center;
+          width: 70%;
 
           .num {
             width: 57px;
@@ -800,26 +805,20 @@ nav {
             }
           }
         }
-
-        .post-one {
-          img {
-            width: 181px;
-            height: 266px;
+        .post-right{
+          width: 30%;
+          height: 270px;
+          img{
+            max-width: 100%;
+            height: 270px;
+            object-fit: cover;
           }
         }
+      }
 
-        .post-two {
-          img {
-            width: 286px;
-            height: 262px;
-          }
-        }
-
-        .post-three {
-          img {
-            width: 274px;
-            height: 203px;
-          }
+      .even{
+        .post-left{
+          justify-content: end;
         }
       }
     }
@@ -831,6 +830,7 @@ nav {
         text-align: center;
         font-size: 30px;
       }
+
       .fb-slider-area {
         position: relative;
 
@@ -961,7 +961,7 @@ nav {
       .you-think-right {
         img {
           max-width: 465px;
-          height: 341px;
+          height: 341px;  
         }
       }
     }
@@ -1048,6 +1048,48 @@ nav {
 }
 
 
+@media only screen and (max-width:1180px) {
+  #go {
+    .my-container {
+      .go-quiz {
+        padding: 48px 0px 0px 0px;
+        .go-quiz-img {
+          width: 350px;
+          height: 375px
+        }
+      }
+    }
+  }
+  #payment{
+    .money-back{
+      padding: 100px 200px;
+    }
+  }
+}
+
+
+@media only screen and (max-width:996px) {
+  #go {
+    .my-container {
+      .go-quiz {
+        .go-quiz-img {
+          width: 258px;
+          height: 281px;
+        }
+        .go-quiz-info{
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+  #payment{
+    .money-back{
+      padding: 100px 140px;
+    }
+  }
+}
+
+
 @media only screen and (max-width:768px) {
   #quiz {
     .my-container {
@@ -1073,7 +1115,6 @@ nav {
     .my-container {
       .go-quiz {
         padding: 48px 0px 0px 0px;
-
         .go-quiz-info {
           padding-top: 28px;
 
@@ -1102,20 +1143,27 @@ nav {
     .my-container {
       .you-get {
         padding: 0px;
-        .post{
+        .post {
           display: flex;
           flex-direction: column;
-          .post-left{
+          height: auto;
+          .post-left {
             order: 2;
             margin: 0 auto;
+            width: 100%;
+            justify-content: center;
           }
-          .post-right{
-            order: 1; 
+
+          .post-right {
+            order: 1;
+            width: 100%;
             text-align: center;
             margin-bottom: 30px;
           }
         }
+        
       }
+
       .payment-area {
         .your-profile {
           max-width: 496px;
@@ -1147,24 +1195,30 @@ nav {
           }
         }
       }
-      .try-now{
-        .payment-about{
+
+      .try-now {
+        .payment-about {
           font-size: 14px;
         }
       }
-      .feed-back{
+
+      .feed-back {
         margin-bottom: 90px;
         padding-bottom: 0px;
-        .fb-slider-area{
-          .fb-slider{
+
+        .fb-slider-area {
+          .fb-slider {
             padding: 35px 86px;
-            .person{
+
+            .person {
               margin-bottom: 29px;
             }
-            .person-text{
+
+            .person-text {
               padding: 0px;
               position: relative;
-              .star{
+
+              .star {
                 position: absolute;
                 top: -68px;
                 right: 0;
@@ -1174,18 +1228,22 @@ nav {
         }
       }
     }
-    .you-think{
+
+    .you-think {
       margin: 40px 0px;
       padding: 27px 150px 0px 150px;
-      .you-think-info{
+
+      .you-think-info {
         display: block;
-        text-align: center; 
+        text-align: center;
         position: relative;
-        .you-think-right{
+
+        .you-think-right {
           padding-bottom: 160px;
         }
-        .you-think-left{
-          ul{
+
+        .you-think-left {
+          ul {
             position: absolute;
             bottom: 25px;
             width: 100%;
@@ -1193,26 +1251,32 @@ nav {
         }
       }
     }
-    .money-back{
+
+    .money-back {
       padding: 27px 116px;
-      .money-back-info{
+
+      .money-back-info {
         display: block;
         position: relative;
-        .money-back-left{
-          .name{
+
+        .money-back-left {
+          .name {
             text-align: center;
             margin-bottom: 40px;
           }
-          .info{
+
+          .info {
             position: absolute;
             bottom: 40px;
           }
-          .info-link{
+
+          .info-link {
             position: absolute;
             bottom: 0;
           }
         }
-        .money-back-right{
+
+        .money-back-right {
           padding-bottom: 150px;
           text-align: center;
         }
@@ -1221,7 +1285,6 @@ nav {
   }
 
 }
-
 
 @media only screen and (max-width:480px) {
 
@@ -1254,6 +1317,13 @@ nav {
           }
         }
       }
+    }
+  }
+
+  #plan {
+    .plan-area {
+      width: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -1290,117 +1360,148 @@ nav {
       }
     }
   }
-  #payment{
-    .hours{
+
+  #payment {
+    .hours {
       padding: 30px 0px;
-      .hours-area{
+
+      .hours-area {
         display: block;
         text-align: center;
-        .left{
+
+        .left {
           display: block;
-          p{
+
+          p {
             margin-bottom: 17px;
           }
         }
-        .right{
+
+        .right {
           margin-top: 20px;
-          button{
+
+          button {
             width: 100%;
           }
         }
       }
     }
-    .my-container{
-      .payment-area{
-        .back{
+
+    .my-container {
+      .payment-area {
+        .back {
           margin-bottom: 30px;
         }
-        .your-profile{
-          .profile-about{
+
+        .your-profile {
+          .profile-about {
             padding: 20px 24px 28px 24px;
           }
-          .info{
+
+          .info {
             padding: 26px 20px;
           }
         }
       }
-      .you-get{
-        .post{
-          .post-right{
-            img{
+
+      .you-get {
+        .post {
+          height: auto;
+          .post-right {
+            width: 100%;
+            img {
               max-width: 100%;
             }
           }
-          .post-left{
-            .post-info{
+
+          .post-left {
+            width: 100%;
+            .post-info {
               margin-left: 20px;
               width: 247px;
-              .name{
+
+              .name {
                 font-size: 22px;
               }
-              .info{
-               width: 100%;
+
+              .info {
+                width: 100%;
                 font-size: 16px;
               }
             }
           }
         }
       }
-      .feed-back{
+
+      .feed-back {
         margin-bottom: 90px;
-        .fb-slider-area{
-          .fb-slider{
+
+        .fb-slider-area {
+          .fb-slider {
             padding: 30px 43px;
-            .person-text{
-              .star{
+
+            .person-text {
+              .star {
                 left: 0;
                 bottom: 0;
                 top: 0;
               }
-              .text{
+
+              .text {
                 padding-top: 40px;
               }
             }
-            .change{
+
+            .change {
               width: 54px;
               height: 54px;
-              i{
+
+              i {
                 line-height: 54px;
               }
             }
-            .back-p{
+
+            .back-p {
               left: -27px;
             }
-            .next-p{
+
+            .next-p {
               right: -27px;
             }
           }
         }
       }
     }
-    .you-think{
+
+    .you-think {
       padding: 30px 30px 0px 30px;
-      .you-think-info{
-        .you-think-right{
+
+      .you-think-info {
+        .you-think-right {
           padding-bottom: 100px;
-          img{
+
+          img {
             max-width: 100%;
             object-fit: contain;
           }
         }
       }
     }
-    .money-back{
+
+    .money-back {
       padding: 30px 30px 60px 30px;
-      .money-back-info{
-        .money-back-left{
-          .name{
+
+      .money-back-info {
+        .money-back-left {
+          .name {
             margin-bottom: 30px;
           }
-          .info{
+
+          .info {
             bottom: 0px;
           }
-          .info-link{
+
+          .info-link {
             bottom: -60px;
           }
         }

@@ -49,10 +49,12 @@ $(window).on('load', function () {
     var defoltSecondPercent = 0;
 
 
-    var firstPercent = (100 / (leftOverLay - 1));
+    // var firstPercent = (100 / (leftOverLay - 1));
+    var firstPercent = (100 /leftOverLay);
 
-
-    var secondPercent = (100 / (rightOverLay - 1));
+    // var secondPercent = (100 / (rightOverLay - 1));
+    var secondPercent = (100 / rightOverLay);
+    
 
 
 
@@ -68,18 +70,24 @@ $(window).on('load', function () {
 
         if (quizType == 0) {
             defoltFirstPercent += firstPercent;
-
-            if (defoltFirstPercent > 100) {
+            defoltSecondPercent = 0;
+            if (defoltFirstPercent >= 100) {
                 defoltFirstPercent = 100;
-                $(".layoutSecond").css('width', secondPercent + '%');
-
+                defoltSecondPercent += secondPercent;
+                var test = setInterval(function () {
+                    $(".layoutSecond").css('transition', "width 0.2s");
+                    $(".layoutSecond").css('width', defoltSecondPercent + '%');
+                   
+               }, 200);
             }
             $(".layoutFirst").css('width', defoltFirstPercent + '%');
+          
         }
         else {
             if (defoltSecondPercent > 100) {
                 defoltSecondPercent = 100;
             }
+           
             defoltSecondPercent += secondPercent;
             $(".layoutSecond").css('width', defoltSecondPercent + '%');
 
@@ -87,7 +95,6 @@ $(window).on('load', function () {
 
         activSliderCount += 1;
         changeSlider(activSliderCount);
-
         if ((activSliderCount - 1) == mySliders.length) {
             location.href = 'creating-plan.html';
         }
@@ -246,12 +253,20 @@ $(window).on('load', function () {
     // payment page slider end
 
     // time 
-    //  var min = 0;
-    // var timeInterval = setInterval(function () {
-    //     min +=1
-    //  console.log(min)
-    // }, 1000);
+    var timer2 = "10:00";
+    var intervalT = setInterval(function() {
 
+    var timer = timer2.split(':');
+    var minutes = parseInt(timer[0], 10);
+    var seconds = parseInt(timer[1], 10);
+    --seconds;
+    minutes = (seconds < 0) ? --minutes : minutes;
+    if (minutes < 0) clearInterval(intervalT);
+    seconds = (seconds < 0) ? 59 : seconds;
+    seconds = (seconds < 10) ? '0' + seconds : seconds;
+    $('.timer').html(minutes + ':' + seconds);
+    timer2 = minutes + ':' + seconds;
+    }, 1000);
 });
 
 
