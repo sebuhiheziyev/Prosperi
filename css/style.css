@@ -360,6 +360,10 @@ nav .my-container .nav-area .menu .support-mail a {
   font-weight: 400;
 }
 
+#quiz .my-container .quiz-area .quiz-main .quiz-content .btn-blue {
+  width: 100%;
+}
+
 #go .my-container .go-quiz {
   padding: 55px 105px 0px 105px;
   display: -webkit-box;

@@ -191,20 +191,16 @@ nav {
 
 #quiz {
   .my-container {
-
     .quiz-area {
       padding: 25px 0px 150px 0px;
-
       .quiz-degree {
         margin: 0px 0px 25px 0px;
         padding-top: 75px;
-
         .degree-same {
           background: rgba(95, 122, 241, 0.1);
           border-radius: 33px;
           position: relative;
           height: 21px;
-
           .degree-layout {
             background: $blue-color;
             border-radius: 33px;
@@ -213,7 +209,6 @@ nav {
             transition: width .25s linear;
             max-width: 100%;
           }
-
           .degree-name {
             position: absolute;
             bottom: -28px;
@@ -221,7 +216,6 @@ nav {
             font-weight: 300;
           }
         }
-
         .quiz-degree-first {
           width: 100%;
 
@@ -238,15 +232,12 @@ nav {
           }
         }
       }
-
       .quiz-main {
         width: 498px;
         margin: 0 auto;
-
         .quiz-content {
           position: relative;
           padding-top: 30px;
-
           .quiz-counter {
             color: $blue-color;
             position: absolute;
@@ -287,13 +278,15 @@ nav {
           .quiz-text {
             font-size: 22px;
             padding: 0px 0px 20px 0px;
-
             .smoll {
               font-size: 18px;
               font-weight: 400;
             }
+           
           }
-
+          .btn-blue{
+            width: 100%;
+          }
         }
       }
     }
