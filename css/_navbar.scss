@@ -1,0 +1,69 @@
+nav {
+    z-index: 999;
+    .my-container {
+      .nav-area {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 35px;
+        position: relative;
+  
+        a.refresh {
+          font-size: 24px;
+          font-weight: 600;
+          color: $main-color;
+        }
+  
+        .hamburger-icon {
+          position: absolute;
+          cursor: pointer;
+          right: 13px;
+          top: 39px;
+  
+          i {
+            font-size: 30px;
+          }
+        }
+  
+        .menu {
+          position: absolute;
+          width: 100%;
+          top: 146px;
+          left: 0;
+          text-align: center;
+          font-size: 18px;
+  
+          ul {
+            margin-bottom: 65px;
+  
+            li {
+              margin-top: 20px;
+  
+              &:first-child {
+                margin-top: 0px;
+              }
+  
+              a {
+                font-weight: 500;
+                color: $main-color;
+              }
+            }
+          }
+  
+          .support-mail {
+            a {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  //open fixed menu
+  .navbar-open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  

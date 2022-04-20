@@ -1,0 +1,93 @@
+#plan {
+    .plan-area {
+      width: 315px;
+      margin: 0 auto;
+      padding-top: 94px;
+      .spinner {
+        margin: 0 auto;
+        font-weight: 700;
+        font-size: 25px;
+        color: $blue-color;
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+          border: 11px solid $blue-color;
+          border-radius: 50%;
+          position: absolute;
+          content: '';
+          display: block;
+          width: 140px;
+          height: 140px;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+          animation: spinner-1o3y8q 1.0499999999999998s infinite linear reverse;
+        }
+  
+        &::after {
+          border: 11px solid $blue-color;
+          border-radius: 50%;
+          position: absolute;
+          content: '';
+          display: block;
+          animation: spinner-1o3y8q 0.7s infinite linear;
+          height: 180px;
+          width: 180px;
+          border-right-color: transparent;
+          border-top-color: transparent;
+        }
+  
+        @keyframes spinner-1o3y8q {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+  
+      }
+  
+  
+      .create-plan {
+        padding-top: 37px;
+        p {
+          font-weight: 600;
+          font-size: 20px;
+          color: $main-color;
+          margin-bottom: 40px;
+        }
+  
+        ul {
+          li {
+            margin-bottom: 15px;
+            color: $gray-color;
+  
+            i {
+              font-size: 24px;
+              display: inline-block;
+              color: $gray-color;
+              vertical-align: middle;
+            }
+  
+            span {
+              margin-left: 5px;
+              color: $gray-color;
+            }
+          }
+  
+          li.active {
+            i {
+              color: $blue-color;
+            }
+  
+            span {
+              color: $blue-color;
+            }
+          }
+        }
+  
+      }
+    }
+  
+  }

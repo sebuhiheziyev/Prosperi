@@ -1,0 +1,20 @@
+#privacy {
+    padding-top: $section-padding;
+
+    .sub-text {
+        margin-bottom: 75px;
+
+        p {
+            font-weight: 400;
+        }
+    }
+
+    .info-text {
+        margin-bottom: 75px;
+
+        ul {
+            list-style-position: inside;
+            list-style-type: disc;
+        }
+    }
+}

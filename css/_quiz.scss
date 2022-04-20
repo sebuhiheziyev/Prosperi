@@ -1,0 +1,102 @@
+#quiz {
+    .my-container {
+      .quiz-area {
+        padding: 25px 0px 150px 0px;
+        .quiz-degree {
+          margin: 0px 0px 25px 0px;
+          padding-top: 75px;
+          .degree-same {
+            background: rgba(95, 122, 241, 0.1);
+            border-radius: 33px;
+            position: relative;
+            height: 21px;
+            .degree-layout {
+              background: $blue-color;
+              border-radius: 33px;
+              height: 21px;
+              position: absolute;
+              transition: width .25s linear;
+              max-width: 100%;
+            }
+            .degree-name {
+              position: absolute;
+              bottom: -28px;
+              color: $blue-color;
+              font-weight: 300;
+            }
+          }
+          .quiz-degree-first {
+            width: 100%;
+  
+            .degree-layout {
+              width: 0;
+            }
+          }
+  
+          .quiz-degree-second {
+            width: 100%;
+  
+            .degree-layout {
+              width: 0;
+            }
+          }
+        }
+        .quiz-main {
+          width: 498px;
+          margin: 0 auto;
+          .quiz-content {
+            position: relative;
+            padding-top: 30px;
+            .quiz-counter {
+              color: $blue-color;
+              position: absolute;
+              top: -85px;
+              right: 0px;
+              font-weight: 300;
+            }
+  
+            .quiz-question {
+              font-size: 22px;
+              font-weight: 500;
+              margin-bottom: 15px;
+            }
+  
+            .quiz-answers {
+              .quiz-answer {
+                background: rgba(95, 122, 241, 0.1);
+                border-radius: 33px;
+                padding: 18px 20px 18px 20px;
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+                border: none;
+              }
+            }
+  
+            .quiz-img {
+              margin: 0px auto 35px auto;
+              text-align: center;
+              img {
+                max-width: 100%;
+                text-align: center;
+                margin: 0 auto;
+              }
+            }
+  
+            .quiz-text {
+              font-size: 22px;
+              padding: 0px 0px 20px 0px;
+              .smoll {
+                font-size: 18px;
+                font-weight: 400;
+              }
+             
+            }
+            .btn-blue{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,489 @@
+@media only screen and (max-width:1180px) {
+  #go {
+    .my-container {
+      .go-quiz {
+        padding: 48px 0px 0px 0px;
+
+        .go-quiz-img {
+          width: 350px;
+          height: 375px
+        }
+      }
+    }
+  }
+
+  #payment {
+    .money-back {
+      padding: 100px 200px;
+    }
+  }
+}
+
+
+@media only screen and (max-width:996px) {
+  #go {
+    .my-container {
+      .go-quiz {
+        .go-quiz-img {
+          width: 258px;
+          height: 281px;
+        }
+
+        .go-quiz-info {
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+
+  #payment {
+    .money-back {
+      padding: 100px 50px;
+    }
+
+    .you-think {
+      padding: 65px 50px;
+    }
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+  #quiz {
+    .my-container {
+      .quiz-area {
+        .quiz-main {
+          width: 372px;
+
+          .quiz-degree {
+            padding-top: 41px;
+          }
+
+          .quiz-content {
+            .quiz-question {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #go {
+    .my-container {
+      .go-quiz {
+        padding: 48px 0px 0px 0px;
+
+        .go-quiz-info {
+          padding-top: 28px;
+
+          h2 {
+            font-size: 24px;
+          }
+
+          .go-quiz-btn {
+            width: 252px;
+          }
+          .page-links{
+            inline-size: 252px;
+            overflow-wrap: break-word;
+          }
+        }
+
+        .go-quiz-img {
+          width: 258px;
+          height: 281px;
+        }
+      }
+    }
+  }
+
+  #payment {
+    .hours {
+      padding: 30px 50px;
+    }
+
+    .my-container {
+      .you-get {
+        padding: 0px;
+
+        .post {
+          display: flex;
+          flex-direction: column;
+          height: auto;
+
+          .post-left {
+            order: 2;
+            margin: 0 auto;
+            width: 100%;
+            justify-content: center;
+          }
+
+          .post-right {
+            order: 1;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+          }
+        }
+
+      }
+
+      .payment-area {
+        .your-profile {
+          max-width: 496px;
+
+          .profile-about {
+            padding: 20px 40px 24px 40px;
+
+            .about {
+              margin-bottom: 20px;
+
+              .about-name {
+                font-size: 18px;
+                margin-bottom: 8px;
+              }
+
+              .about-info {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .info {
+            padding: 26px 130px 26px 35px;
+            align-items: center;
+
+            p {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .try-now {
+        .payment-about {
+          font-size: 14px;
+        }
+      }
+
+      .feed-back {
+        margin-bottom: 90px;
+        padding-bottom: 0px;
+
+        .fb-slider-area {
+          .fb-slider {
+            padding: 35px 86px;
+
+            .person {
+              margin-bottom: 29px;
+            }
+
+            .person-text {
+              padding: 0px;
+              position: relative;
+
+              .star {
+                position: absolute;
+                top: -68px;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .you-think {
+      margin: 40px 0px;
+      padding: 27px 120px 0px 120px;
+
+      .you-think-info {
+        display: block;
+        text-align: center;
+        position: relative;
+
+        .you-think-right {
+          padding-bottom: 160px;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .you-think-left {
+          inline-size: 100%;
+
+          ul {
+            position: absolute;
+            bottom: 25px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .money-back {
+      padding: 27px 116px;
+
+      .money-back-info {
+        display: block;
+        position: relative;
+
+        .money-back-left {
+          .name {
+            text-align: center;
+            margin-bottom: 40px;
+          }
+
+          .info {
+            position: absolute;
+            inline-size: 100%;
+            bottom: 40px;
+          }
+
+          .info-link {
+            position: absolute;
+            bottom: 0;
+          }
+        }
+
+        .money-back-right {
+          padding-bottom: 150px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width:480px) {
+
+  #quiz {
+    .my-container {
+      .quiz-area {
+        .quiz-main {
+          width: 100%;
+
+          .quiz-degree {
+            padding-top: 48px;
+            font-size: 14px;
+
+          }
+
+          .quiz-content {
+            padding-top: 20px;
+
+            .quiz-question {
+              font-size: 18px;
+            }
+
+            .quiz-counter {
+              font-size: 14px;
+            }
+
+            .quiz-text {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #plan {
+    .plan-area {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  #go {
+    .my-container {
+      .go-quiz {
+        padding-top: 48px;
+        display: block;
+        position: relative;
+
+        .go-quiz-info {
+          width: 100%;
+
+          h2 {
+            text-align: center;
+            margin-bottom: 40px;
+          }
+
+          .group-R {
+            position: absolute;
+            bottom: -200px;
+
+            .go-quiz-btn {
+              width: 100%;
+            }
+            .page-links{
+              inline-size: 100%;
+            }
+          }
+        }
+
+        .go-quiz-img {
+          margin: 0 auto;
+          width: 229px;
+          height: 249px;
+        }
+      }
+    }
+  }
+
+  #payment {
+    .hours {
+      padding: 30px 0px;
+
+      .hours-area {
+        display: block;
+        text-align: center;
+
+        .left {
+          display: block;
+
+          p {
+            margin-bottom: 17px;
+          }
+        }
+
+        .right {
+          margin-top: 20px;
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .my-container {
+      .payment-area {
+        .back {
+          margin-bottom: 30px;
+        }
+
+        .your-profile {
+          .profile-about {
+            padding: 20px 24px 28px 24px;
+          }
+
+          .info {
+            padding: 26px 20px;
+          }
+        }
+      }
+
+      .you-get {
+        .post {
+          height: auto;
+
+          .post-right {
+            width: 100%;
+
+            img {
+              max-width: 100%;
+            }
+          }
+
+          .post-left {
+            width: 100%;
+
+            .post-info {
+              margin-left: 20px;
+              width: 247px;
+
+              .name {
+                font-size: 22px;
+              }
+
+              .info {
+                width: 100%;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      .feed-back {
+        margin-bottom: 90px;
+
+        .fb-slider-area {
+          .fb-slider {
+            padding: 30px 43px;
+
+            .person-text {
+              .star {
+                left: 0;
+                bottom: 0;
+                top: 0;
+              }
+
+              .text {
+                padding-top: 40px;
+              }
+            }
+
+            .change {
+              width: 54px;
+              height: 54px;
+
+              i {
+                line-height: 54px;
+              }
+            }
+
+            .back-p {
+              left: -27px;
+            }
+
+            .next-p {
+              right: -27px;
+            }
+          }
+        }
+      }
+    }
+
+    .you-think {
+      padding: 30px 30px 0px 30px;
+
+      .you-think-info {
+        .you-think-right {
+          padding-bottom: 100px;
+
+          img {
+            max-width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .money-back {
+      padding: 30px 30px 60px 30px;
+
+      .money-back-info {
+        .money-back-left {
+          .name {
+            margin-bottom: 30px;
+          }
+
+          .info {
+            bottom: 0px;
+          }
+
+          .info-link {
+            bottom: -60px;
+          }
+        }
+      }
+    }
+  }
+}

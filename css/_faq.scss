@@ -1,0 +1,17 @@
+#faq {
+    padding-top: $section-padding;
+    padding-bottom: 80px;
+
+    .faqs {
+        .question {
+            list-style-type: disc;
+            list-style-position: inside;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .answer {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -117,7 +117,11 @@ $(window).on('load', function () {
 
         }
     }
+    //payment page back icon click
+    $(".backEmailPage").click(function(){
+        location.href = 'email.html';
 
+    });
 
     //click back
     $(".back").click(function () {
@@ -147,6 +151,7 @@ $(window).on('load', function () {
             $(".layoutSecond").css('width', 0 + '%');
         }
     });
+    
 
 
     //change quiz end
@@ -264,7 +269,7 @@ $(window).on('load', function () {
     if (minutes < 0) clearInterval(intervalT);
     seconds = (seconds < 0) ? 59 : seconds;
     seconds = (seconds < 10) ? '0' + seconds : seconds;
-    $('.timer').html(minutes + ':' + seconds);
+    $('.time').html(minutes + ':' + seconds);
     timer2 = minutes + ':' + seconds;
     }, 1000);
 });
