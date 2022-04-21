@@ -1276,15 +1276,12 @@ nav .my-container .nav-area .menu .support-mail a {
   }
   #payment .you-think {
     margin: 40px 0px;
-    padding: 27px 120px 0px 120px;
+    padding: 27px 120px 150px 120px;
   }
   #payment .you-think .you-think-info {
     display: block;
     text-align: center;
     position: relative;
-  }
-  #payment .you-think .you-think-info .you-think-right {
-    padding-bottom: 160px;
   }
   #payment .you-think .you-think-info .you-think-right img {
     max-width: 100%;
@@ -1294,7 +1291,7 @@ nav .my-container .nav-area .menu .support-mail a {
   }
   #payment .you-think .you-think-info .you-think-left ul {
     position: absolute;
-    bottom: 25px;
+    bottom: -123px;
     width: 100%;
   }
   #payment .money-back {
@@ -1453,7 +1450,7 @@ nav .my-container .nav-area .menu .support-mail a {
     right: -27px;
   }
   #payment .you-think {
-    padding: 30px 30px 0px 30px;
+    padding: 30px;
   }
   #payment .you-think .you-think-info .you-think-right {
     padding-bottom: 100px;
@@ -1463,8 +1460,11 @@ nav .my-container .nav-area .menu .support-mail a {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  #payment .you-think .you-think-info .you-think-left ul {
+    bottom: -10px;
+  }
   #payment .money-back {
-    padding: 30px 30px 60px 30px;
+    padding: 40px 30px 75px 30px;
   }
   #payment .money-back .money-back-info .money-back-left .name {
     margin-bottom: 30px;

@@ -1,0 +1,4 @@
+quiz seyfesinde mySlider classi olan divde dg=0 olanda soldaki yeni "About you" fiazi artir 1 olanda ise sagdaki "Personalization" atir
+umumende sola 8 sual aiddir bu 8 sual tamamlanda 100% olur(faiz gosteren yer) solda ise axrinci suala 1 sual qalmis tamamlanir 100%
+
+email seyfesinde 10 saniye qalir bunuda js 162 line -da "durationCounter" ile vermisem 
