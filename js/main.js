@@ -1,5 +1,6 @@
 "use strict";
 $(window).on('load', function () {
+    console.log("s");
 
     // open and close menu
     $(".menuOpen").click(function () {
