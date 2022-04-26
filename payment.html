@@ -39,16 +39,16 @@
     </nav>
     <section id="payment">
         <div class="hours">
-           <div class="my-container">
-               <div class="hours-area">
-                  <div class="left">
-                      <p>Discount expires in</p> <span class="timer time">10:00</span>
-                  </div>  
-                  <div class="right">
-                      <button class="btn-blue">try now</button>
-                  </div>  
-               </div>
-           </div>
+            <div class="my-container">
+                <div class="hours-area">
+                    <div class="left">
+                        <p>Discount expires in</p> <span class="timer time">10:00</span>
+                    </div>
+                    <div class="right">
+                        <button class="btn-blue btnScroll">try now</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="my-container">
             <div class="payment-area">
@@ -113,7 +113,7 @@
                 </div>
             </div>
         </div>
-        <div class="my-container">
+        <div id="tryNow" class="my-container">
             <div class="try-now">
                 <p>Try Prosperi for 7 days, and you will:</p>
                 <ul>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-blue">try now</button>
+                <button class="btn-blue btnOpenCard">try now</button>
                 <p class="payment-about">By continuing you agree that if you don’t cancel before the end of the 7-days
                     trial period, you will
                     automatically be charged $29.99 every 30 days until you contact support@prosperi.io. Learn more
@@ -177,7 +177,8 @@
                         <span class="num">2</span>
                         <div class="post-info">
                             <p class="name">Easy readings</p>
-                            <p class="info">Your plan will include only those summaries that target your investment goals.
+                            <p class="info">Your plan will include only those summaries that target your investment
+                                goals.
                             </p>
                         </div>
                     </div>
@@ -187,7 +188,8 @@
                         <span class="num">3</span>
                         <div class="post-info">
                             <p class="name">Investment strategies of the best</p>
-                            <p class="info">We carefully pick the key investment rules from the best in their field and compile them in simple-to-follow summaries.
+                            <p class="info">We carefully pick the key investment rules from the best in their field and
+                                compile them in simple-to-follow summaries.
                             </p>
                         </div>
                     </div>
@@ -334,6 +336,69 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="pay d-none">
+           <div class="my-container">
+            <div class="pay-area">
+                <div class="close-pay-area"><i class="fa-solid fa-xmark"></i></div>
+                <div class="pay-type">
+                    <div class="pay-icon">
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <span> Credit Card</span>
+                    </div>
+
+                    <input type="radio" class="inputCheck" checked name="check">
+                </div>
+                <div class="pay-type ">
+                    <div class="pay-icon">
+                        <i class="fa-brands fa-paypal"></i>
+                        <span> PayPal</span>
+                    </div>
+
+                    <input type="radio" class="inputCheck" name="check">
+                </div>
+                <div class="card-area">
+                    <div class="top">
+                        <div class="input-gp">
+                            <label>Card number</label>
+                            <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="number">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="input-gp">
+                            <label>Expiraton date</label>
+                            <input type="text" placeholder="MM/YY" class="date">
+                        </div>
+                        <div class="input-gp">
+                            <label>CVV/CVC</label>
+                            <input type="text" placeholder="***" class="ccv">
+                        </div>
+                    </div>
+                </div>
+                <div class="paypal-area d-none">
+
+                </div>
+                <div class="btn-blue">
+                    PAY $10
+                </div>
+            </div>
+            <div class="offer d-none">
+                <div class="close-offer"><i class="fa-solid fa-xmark"></i></div>
+                <div class="black-img">
+                    <img src="img/top.png" alt="">
+                    <span>75%</span>
+                </div>
+                <div class="blue-img">
+                    <img src="img/bottom.png" alt="">
+                    <span>SPECIAL OFFER</span>
+                </div>
+                <p>We want you to find success so we are offering you a discount to try our proven learning program and grow wealth.</p>
+                <a href="" class="btn-blue">
+                    GET 75% DISCOUNT
+                </a>
+            </div>
+           </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

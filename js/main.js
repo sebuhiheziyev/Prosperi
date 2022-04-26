@@ -1,7 +1,5 @@
 "use strict";
 $(window).on('load', function () {
-    console.log("s");
-
     // open and close menu
     $(".menuOpen").click(function () {
         //icons
@@ -51,11 +49,11 @@ $(window).on('load', function () {
 
 
     // var firstPercent = (100 / (leftOverLay - 1));
-    var firstPercent = (100 /leftOverLay);
+    var firstPercent = (100 / leftOverLay);
 
     // var secondPercent = (100 / (rightOverLay - 1));
     var secondPercent = (100 / rightOverLay);
-    
+
 
 
 
@@ -78,17 +76,17 @@ $(window).on('load', function () {
                 var test = setInterval(function () {
                     $(".layoutSecond").css('transition', "width 0.2s");
                     $(".layoutSecond").css('width', defoltSecondPercent + '%');
-                   
-               }, 200);
+
+                }, 200);
             }
             $(".layoutFirst").css('width', defoltFirstPercent + '%');
-          
+
         }
         else {
             if (defoltSecondPercent > 100) {
                 defoltSecondPercent = 100;
             }
-           
+
             defoltSecondPercent += secondPercent;
             $(".layoutSecond").css('width', defoltSecondPercent + '%');
 
@@ -119,7 +117,7 @@ $(window).on('load', function () {
         }
     }
     //payment page back icon click
-    $(".backEmailPage").click(function(){
+    $(".backEmailPage").click(function () {
         location.href = 'email.html';
 
     });
@@ -152,12 +150,63 @@ $(window).on('load', function () {
             $(".layoutSecond").css('width', 0 + '%');
         }
     });
-    
+
 
 
     //change quiz end
 
+    //TRY NOW BTN CLICK
+    var tryNowScroll = $("#tryNow").offset();
+    $('.btnScroll').on("click", function () {
+        $(window).scrollTop(tryNowScroll.top - 100);
 
+    });
+
+    $(".btnOpenCard").click(function () {
+        $(".pay").removeClass("d-none");
+        $(".pay-area").removeClass("d-none");
+        $(".offer").addClass("d-none");
+
+    });
+
+
+    $(".close-pay-area").click(function () {
+        $(".pay-area").addClass("d-none");
+        $(".offer").removeClass("d-none");
+    });
+
+    $(".close-offer").click(function () {
+        $(".offer").addClass("d-none");
+        $(".pay").addClass("d-none");
+    });
+
+    var inputsCheck = $(".inputCheck");
+    var functionRadio = function() {
+        for (let index = 0; index < inputsCheck.length; index++) {
+            inputsCheck[index].parentElement.classList.remove('active');
+          
+            if (inputsCheck[index].checked) {
+                inputsCheck[index].parentElement.classList.add('active');
+                if(index == 0){
+                  $(".paypal-area").addClass("d-none");
+
+                  $(".card-area").removeClass("d-none");
+                  $(".card-area").addClass("d-block");
+                }
+                else{
+                     $(".card-area").addClass("d-none");
+
+                    $(".paypal-area").removeClass("d-none");
+                    $(".paypal-area").addClass("d-block");
+                }
+            }
+        }
+    };
+    functionRadio();
+    $('input[type=radio][name=check]').on('change', function () {
+     functionRadio();
+    });
+    //END TRY NOW BTN
 
     //plan page in loading 
     var durationCounter = 10000;    //plan page in loading min
@@ -200,13 +249,13 @@ $(window).on('load', function () {
         if (d < counterValue) {
             $(".plan")[d].classList.add('active');
             d += 1;
-        }else{
+        } else {
             clearInterval(interval);
         }
     }, durationPlan);
     //end  plan page in li add active 
-    
- 
+
+
 
     //creating page btn email click
     $(".emailBtn").click(function () {
@@ -260,18 +309,18 @@ $(window).on('load', function () {
 
     // time 
     var timer2 = "10:00";
-    var intervalT = setInterval(function() {
+    var intervalT = setInterval(function () {
 
-    var timer = timer2.split(':');
-    var minutes = parseInt(timer[0], 10);
-    var seconds = parseInt(timer[1], 10);
-    --seconds;
-    minutes = (seconds < 0) ? --minutes : minutes;
-    if (minutes < 0) clearInterval(intervalT);
-    seconds = (seconds < 0) ? 59 : seconds;
-    seconds = (seconds < 10) ? '0' + seconds : seconds;
-    $('.time').html(minutes + ':' + seconds);
-    timer2 = minutes + ':' + seconds;
+        var timer = timer2.split(':');
+        var minutes = parseInt(timer[0], 10);
+        var seconds = parseInt(timer[1], 10);
+        --seconds;
+        minutes = (seconds < 0) ? --minutes : minutes;
+        if (minutes < 0) clearInterval(intervalT);
+        seconds = (seconds < 0) ? 59 : seconds;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        $('.time').html(minutes + ':' + seconds);
+        timer2 = minutes + ':' + seconds;
     }, 1000);
 });
 
