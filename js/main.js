@@ -158,7 +158,7 @@ $(window).on('load', function () {
     //TRY NOW BTN CLICK
     var tryNowScroll = $("#tryNow").offset();
     $('.btnScroll').on("click", function () {
-        $(window).scrollTop(tryNowScroll.top - 100);
+        $(window).scrollTop(tryNowScroll.top);
 
     });
 
